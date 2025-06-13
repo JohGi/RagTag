@@ -1,3 +1,12 @@
+> ***This is a patched fork of [RagTag](https://github.com/malonge/ragtag)***
+>
+> ### Changes in this fork:
+> - Fixed a bug in argument parsing for `--mm2-params` and `--unimap-params`:  
+>   The original version incorrectly raised errors or warnings when options contained the letters `a` or `c`, even if they were unrelated to the `-a` or `-c` flags.  
+>   Now only proper `-a` and `-c` flags are detected.
+>
+> The original documentation from RagTag is preserved below.
+
 ![logo_text](logo/logo_banner.svg)
 
 ## RagTag 
