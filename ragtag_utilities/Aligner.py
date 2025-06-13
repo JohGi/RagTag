@@ -269,10 +269,8 @@ class Minimap2SAMAligner(Aligner):
         :return: True if the parameters are valid. Raises appropriate errors otherwise
         """
         all_flags = self.params_string.split()
-        if "-a" in all_flags:
-            raise ValueError("Alignments must not be in SAM format (-a).")
-
-        return True
+        if "-a" not in all_flags:
+            raise ValueError("Alignments must be in SAM format (-a).")
 
     def compile_command(self):
         """
