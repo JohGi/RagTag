@@ -200,13 +200,6 @@ class Minimap2Aligner(Aligner):
         if "-c" in all_flags:
             log("WARNING", "Computing base-alignments (-c) will slow down Minimap2 alignment.")
 
-        # all_flags = "".join([i for i in self.params_string.split(" ") if i.startswith("-")])
-        # if "a" in all_flags:
-        #     raise ValueError("Alignments must not be in SAM format (-a).")
-
-        # if "c" in all_flags:
-        #     log("WARNING", "Computing base-alignments (-c) will slow down Minimap2 alignment.")
-
         return True
 
     def compile_command(self):
@@ -244,13 +237,6 @@ class UnimapAligner(Aligner):
         if "-c" in all_flags:
             log("WARNING", "Computing base-alignments (-c) will slow down Minimap2 alignment.")
 
-        # all_flags = "".join([i for i in self.params_string.split(" ") if i.startswith("-")])
-        # if "a" in all_flags:
-        #     raise ValueError("Alignments must not be in SAM format (-a).")
-
-        # if "c" in all_flags:
-        #     log("WARNING", "Computing base-alignments (-c) will slow down Unimap alignment.")
-
         return True
 
     def compile_command(self):
@@ -285,9 +271,6 @@ class Minimap2SAMAligner(Aligner):
         all_flags = self.params_string.split()
         if "-a" in all_flags:
             raise ValueError("Alignments must not be in SAM format (-a).")
-        # all_flags = "".join([i for i in self.params_string.split(" ") if i.startswith("-")])
-        # if "a" not in all_flags:
-        #     raise ValueError("Alignments must be in SAM format (-a).")
 
         return True
 
